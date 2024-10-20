@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: fit-content;
+  width: 70%;
+
+  color: white;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  grid-template-areas:
+    " a a b c"
+    " e f f c";
+}
+
+.container > * {
+  border-radius: 10px;
+}
+
+.testimonial:nth-child(1) {
+  grid-area: a;
+  background-color: hsl(240, 60%, 45%);
+}
+
+.testimonial:nth-child(2) {
+  grid-area: b;
+  background-color: hsl(210, 51%, 20%);
+}
+
+.testimonial:nth-child(3) {
+  grid-area: c;
+  background-color: hsl(120, 100%, 20%);
+}
+
+.testimonial:nth-child(4) {
+  grid-area: e;
+  background-color: hsl(209, 100%, 10%);
+}
+
+.testimonial:nth-child(5) {
+  grid-area: f;
+  background-color: hsl(330, 100%, 35%);
+}
+
+.testimonial > * + * {
+  margin-top: 1.4rem;
+}
+
+.contact-card img {
+  height: 40px;
+  width: 40px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.flex:has(> span) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0;
+}
+.container :is(span, p) {
+  opacity: 70%;
+}
+/* utility-classes */
+.ubuntu {
+  font-family: "Ubuntu Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.font-size {
+  font-size: 13px;
+}
+
+.padding {
+  padding: 1.4rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* --end of utility classes-- */
